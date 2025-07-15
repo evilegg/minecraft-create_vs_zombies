@@ -1,0 +1,22 @@
+{
+  "DurabilityWoodenHammer": 302,
+  "DurabilityStoneHammer": 650,
+  "DurabilityIronHammer": 1300,
+  "DurabilityGoldHammer": 750,
+  "DurabilityLapisHammer": 1100,
+  "DurabilityRedstoneHammer": 1100,
+  "DurabilityObsidianHammer": 11200,
+  "DurabilityDiamondHammer": 8025,
+  "DurabilityEmeraldHammer": 9768,
+  "DurabilityNetheriteHammer": 13675,
+  "DurabilityWoodenExcavator": 302,
+  "DurabilityStoneExcavator": 650,
+  "DurabilityIronExcavator": 1300,
+  "DurabilityGoldExcavator": 750,
+  "DurabilityLapisExcavator": 1100,
+  "DurabilityRedstoneExcavator": 1100,
+  "DurabilityObsidianExcavator": 11200,
+  "DurabilityDiamondExcavator": 8025,
+  "DurabilityEmeraldExcavator": 9768,
+  "DurabilityNetheriteExcavator": 13675
+}
