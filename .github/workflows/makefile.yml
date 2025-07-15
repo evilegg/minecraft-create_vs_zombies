@@ -17,3 +17,6 @@ jobs:
     - name: Install dependencies
       run: make
 
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
