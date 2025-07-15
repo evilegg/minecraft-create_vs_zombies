@@ -7,6 +7,8 @@
 - Find curios
 - Create a safe outpost
 
+Download [Create vs Zombies-0.7.0](./dist/Create vs Zombies-0.7.0.mrpack).
+
 ## The overworld is a dangerous place
 
 ![](./images/hiding-in-the-jungle-zombies-attack.png)
