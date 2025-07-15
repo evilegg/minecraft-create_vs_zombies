@@ -1,13 +1,19 @@
 # minecraft-create_vs_zombies
 
-> Balance your minecraft survival gameplay between base-building, logistical automation, and exploration.
+{% set split_summary = summary.split('\n') %}
+{% for line in split_summary %}> {{line}}
+{% endfor %}
+
+## Features
+
+Balance your minecraft survival gameplay between base-building, logistical automation, and exploration.
 
 - Use create to automate your production and salvage equipment
 - Hunt out molten vents for reusable ores
 - Find curios
 - Create a safe outpost
 
-Download [Create vs Zombies-0.7.0](./dist/Create vs Zombies-0.7.0.mrpack).
+Download [{{name}}-{{versionId}}](./dist/{{name}}-{{versionId}}.mrpack).
 
 ## The overworld is a dangerous place
 
@@ -77,3 +83,9 @@ Who knows, you might actually start looking forward to the next invasion.
 How many invasions can you survive before becoming overwhelmed?
 
 ![](./images/zombie-invasion-defeat.png)
+
+## Changelog
+
+### [0.7.0](./dist/Create%20vs%20Zombies-0.7.0.mrpack) - Initial release
+
+- Initial version released for friend play-testing
