@@ -19,14 +19,14 @@ INDEX_FILE = index.html
 MODRINTH_JSON = modrinth.index.json
 
 # Default target
-all: clean package $(DIST_DIR)/$(INDEX_FILE)
+all: clean package $(INDEX_FILE)
 
 # Clean up previous builds
 clean:
 	@echo "Cleaning up previous builds..."
 	@rm -f $(DIST_DIR)/$(ZIP_FILE)
 	@rm -f index.md
-	@rm -f $(DIST_DIR)/$(INDEX_FILE)
+	@rm -f $(INDEX_FILE)
 
 distclean: clean
 	@echo "Cleaning up python virtual environment directory..."
@@ -48,7 +48,7 @@ $(DIST_DIR)/index.md: README.md scripts/json_to_md.py $(PYTHON_EXE)
 	@$(PYTHON_EXE) scripts/json_to_md.py "$<" | tee "$@"
 
 # Build the site
-$(DIST_DIR)/$(INDEX_FILE): $(DIST_DIR)/index.md
+$(INDEX_FILE): $(DIST_DIR)/index.md
 	pandoc \
 		--embed \
 		"$<" \
