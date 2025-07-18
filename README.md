@@ -1,19 +1,13 @@
 # minecraft-create_vs_zombies
 
-<div>
-  <blockquote>
-    {% set split_summary = summary.split('\n') %}
-    {% for line in split_summary %}{{line}}
-    {% endfor %}
-  </blockquote>
-  </p>
-<br/>
-  <p>
-    Download the latest version: <a href="{{name}}-{{versionId}}.mrpack">
-    {{name}}-{{versionId}}.mrpack</a>
-  </p>
-</div>
-
+> Balance between base-building and exploration: use create to automate your production and salvage equipment.
+> Hunt out molten vents for reusable ores. Find curios.
+>
+> But the world is dangerous every few nights, an undead horde will attack.
+> The sun won’t stop them, be ready.
+>
+> Oh and every hit from an undead has a chance to infect you.
+> Without a golden apple to cure you, the infection means certain death.
 
 ## Features
 
@@ -127,6 +121,6 @@ Perhaps a few Create recipies can even out the odds for you?
 
 ## Changelog
 
-### [0.7.0](./dist/Create%20vs%20Zombies-0.7.0.mrpack) - Initial release
+### [0.7.0](./Create%20vs%20Zombies-0.7.0.mrpack) - Initial release
 
 - Initial version released for friend play-testing
