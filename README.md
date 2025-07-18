@@ -1,4 +1,4 @@
-# minecraft-create_vs_zombies
+# Create vs Zombies
 
 > Balance between base-building and exploration: use create to automate your production and salvage equipment.
 > Hunt out molten vents for reusable ores. Find curios.
@@ -20,14 +20,14 @@ Balance your minecraft survival gameplay between base-building, logistical autom
 
 ## The overworld is a dangerous place
 
-![](./images/hiding-in-the-jungle.png)
+![Image: hiding in the jungle](./images/hiding-in-the-jungle.png)
 
 But this world is dangerous place.
 Every few (1-7) nights an undead horde will attack and try to destroy what you've built.
 Invading forces will grow stronger over time.
 The sun won’t stop them so you should be ready for a long fight.
 
-![](./images/morning-after.png)
+![Image: morning after an invasion](./images/morning-after.png)
 
 ## The infection
 
@@ -39,11 +39,11 @@ Without a golden apple, an infection means certain death.
 This infection has hit the other denizens of the world hard.
 Peaceful villagers are on the edge of extinction and have rallied their defenses.
 Zombie Villagers can't be cured using conventional mechanics.
-Even Illagers aren't immune must fight off the hordes.
+Even pillagers aren't immune must fight off the hordes.
 
 ## Exploration is challenging
 
-![](./images/boat-in-glacier-near.png)
+![Image: a boat in a glacier](./images/boat-in-glacier-near.png)
 
 The world is not an empty place.
 Not only do you have to worry about the undead or if the horde is coming this evening, the overworld itself is full of danger.
@@ -53,14 +53,14 @@ While dangerous, there is also resources to be had in those bases.
 
 ### Varied worldgen
 
-![](./images/adventures-on-ice.png)
+![Image: unpredictable adventures (on ice)](./images/adventures-on-ice.png)
 
 There are also dungeons to explore.
 Loot chests and other resources make this exploration a constant temptation from riding out the day in your base.
 
 ### Molten vents
 
-![](./images/molten-vents.png)
+![Image: find molten vents for resource generation](./images/molten-vents.png)
 
 If these resources aren't enough to get you exploring, search the overworld for molten vents.
 They can be found in an outcropping of asurine, vitrine, ochra, etc.
@@ -70,22 +70,22 @@ Or simply dig to the bedrock for tuff.
 
 ## Combat rewards: loot bags
 
-![](./images/legendary-loot-bag.png)
+![Image: a legendary loot bag can hold artifacts](./images/legendary-loot-bag.png)
 
 To help you out further, hostile mobs can drop a loot box that may drop resources to you with your progression.
 
-![](./images/loot-bags-are-craftable.png)
+![Image: loot bags can be converted between tiers](./images/loot-bags-are-craftable.png)
 
 These boxes come in five tiers with better and better loot.
 Who knows, you might actually start looking forward to the next invasion.
 
 ## Invasions
 
-![](./images/zombie-invasion-surrounding.png)
+![Image: early-game zombie invasion](./images/zombie-invasion-surrounding.png)
 
 How many invasions can you survive before becoming overwhelmed?
 
-![](./images/zombie-invasion-defeat.png)
+![Image: the undead can overwhelm](./images/zombie-invasion-defeat.png)
 
 ## Attribution
 
