@@ -93,6 +93,38 @@ How many invasions can you survive before becoming overwhelmed?
 
 ![](./images/zombie-invasion-defeat.png)
 
+
+## Attribution
+
+No modpack runs in isolation.
+I've added links to the cool mods that I've included in this pack:
+
+### Create: Pillager Arise
+
+The Pillagers know how to Create as well.
+Should you take the risk of raiding a Pillagers settlement for advanced Create equipment?
+
+**Package:** `create_pillagers_arise-118.28.GL-neoforge-1.21.1.jar`
+
+**Curseforge:** [Create: Pillager Arise](https://www.curseforge.com/minecraft/mc-mods/create-pillager-arise)
+
+### Create Recycle Everything
+
+Recycling is a core component of this modpack's gameplay.
+Spplement your resource gathering from the remnants of your _epic_ invasion battles.
+
+**Package:** `create_recycle_everything-1.0.1.jar`
+
+**Curseforge:** [Create Recycle Everything](https://www.curseforge.com/minecraft/mc-mods/create-recycle-everything)
+
+### Create: Protection Pixel
+
+Perhaps a few Create recipies can even out the odds for you?
+
+**Package:** `protection_pixel-1.9.4-neoforge-1.21.1.jar`
+
+**Curseforge:** [Create: Protection Pixel](https://www.curseforge.com/minecraft/mc-mods/protection-pixel)
+
 ## Changelog
 
 ### [0.7.0](./dist/Create%20vs%20Zombies-0.7.0.mrpack) - Initial release
