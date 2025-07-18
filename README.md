@@ -1,8 +1,19 @@
 # minecraft-create_vs_zombies
 
-{% set split_summary = summary.split('\n') %}
-{% for line in split_summary %}> {{line}}
-{% endfor %}
+<div>
+  <blockquote>
+    {% set split_summary = summary.split('\n') %}
+    {% for line in split_summary %}{{line}}
+    {% endfor %}
+  </blockquote>
+  </p>
+<br/>
+  <p>
+    Download the latest version: <a href="{{name}}-{{versionId}}.mrpack">
+    {{name}}-{{versionId}}.mrpack</a>
+  </p>
+</div>
+
 
 ## Features
 
@@ -12,8 +23,6 @@ Balance your minecraft survival gameplay between base-building, logistical autom
 - Hunt out molten vents for reusable ores
 - Find curios
 - Create a safe outpost
-
-Download [{{name}}-{{versionId}}.mrpack](./dist/{{name}}-{{versionId}}.mrpack).
 
 ## The overworld is a dangerous place
 
