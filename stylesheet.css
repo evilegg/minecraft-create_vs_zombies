@@ -151,6 +151,17 @@ html {
 }
 
 body {
+  margin: 0 auto;
+  max-width: 54em;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+
     font-family: var(--font-family-prose);
     color: var(--color-text);
     font-size: var(--font-size);
@@ -160,11 +171,6 @@ body {
 
     /* Safari-only right now (macOS, iOS) but looks so good. */
     hanging-punctuation: first;
-
-    margin: 0;
-    padding: 0;
-    padding-top: var(--title-margin-top);
-    width: 100%;
 
     background-color: var(--background-color);
 }
@@ -320,6 +326,7 @@ h6 {
 
 h1.title {
     margin-top: var(--line-height);
+    border-bottom: solid var(--color-border-heavy) 4px;
     margin-bottom: var(--line-height);
     font-size: var(--title-font-size);
     line-height: var(--title-line-height);
