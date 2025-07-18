@@ -25,6 +25,7 @@ all: clean package $(INDEX_FILE)
 clean:
 	@echo "Cleaning up previous builds..."
 	@rm -f $(DIST_DIR)/$(ZIP_FILE)
+	@rm -f $(DIST_DIR)/images/*
 	@rm -f index.md
 	@rm -f $(INDEX_FILE)
 
@@ -48,14 +49,17 @@ $(DIST_DIR)/index.md: README.md scripts/json_to_md.py $(PYTHON_EXE)
 	@$(PYTHON_EXE) scripts/json_to_md.py "$<" | tee "$@"
 
 # Build the site
-$(INDEX_FILE): $(DIST_DIR)/index.md
+$(INDEX_FILE): $(DIST_DIR)/index.md stylesheet.css
 	pandoc \
-		--embed \
 		"$<" \
 		--metadata title=$(MOD_NAME) \
 		--metadata version=$(VERSION) \
 		--standalone \
 		--output "$@" \
+
+$(DIST_DIR)/images/%.png: images/%.png
+	@mkdir -p $(DIST_DIR)/images
+	@cp $< $@
 
 # Help command
 help:
