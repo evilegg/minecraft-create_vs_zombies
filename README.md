@@ -13,7 +13,7 @@ Balance your minecraft survival gameplay between base-building, logistical autom
 - Find curios
 - Create a safe outpost
 
-Download [{{name}}-{{versionId}}](./dist/{{name}}-{{versionId}}.mrpack).
+Download [{{name}}-{{versionId}}.mrpack](./dist/{{name}}-{{versionId}}.mrpack).
 
 ## The overworld is a dangerous place
 
