@@ -26,7 +26,7 @@ Balance your minecraft survival gameplay between base-building, logistical autom
 
 ## The overworld is a dangerous place
 
-![](./images/hiding-in-the-jungle-zombies-attack.png)
+![](./images/hiding-in-the-jungle.png)
 
 But this world is dangerous place.
 Every few (1-7) nights an undead horde will attack and try to destroy what you've built.
