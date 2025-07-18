@@ -87,7 +87,6 @@ How many invasions can you survive before becoming overwhelmed?
 
 ![](./images/zombie-invasion-defeat.png)
 
-
 ## Attribution
 
 No modpack runs in isolation.
@@ -119,8 +118,3 @@ Perhaps a few Create recipies can even out the odds for you?
 
 **Curseforge:** [Create: Protection Pixel](https://www.curseforge.com/minecraft/mc-mods/protection-pixel)
 
-## Changelog
-
-### [0.7.0](./Create%20vs%20Zombies-0.7.0.mrpack) - Initial release
-
-- Initial version released for friend play-testing
