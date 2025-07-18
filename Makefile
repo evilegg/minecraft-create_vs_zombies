@@ -14,6 +14,7 @@ VERSION = $(shell jq ".versionId" modrinth.index.json)
 # Objects
 ZIP_FILE = $(MOD_NAME)-$(VERSION).mrpack
 INDEX_FILE = index.html
+STYLESHEET = stylesheet.css
 
 # Files
 MODRINTH_JSON = modrinth.index.json
@@ -38,6 +39,10 @@ package: clean
 	@echo "Packaging the mod..."
 	@zip -x '*/.DS_Store' @ -r $(DIST_DIR)/$(ZIP_FILE) $(SOURCES_DIR) $(MODRINTH_JSON)
 
+# Build github pages
+pages: clean $(INDEX_FILE)
+	@echo "Building the website..."
+
 # Python dependencies for DRY
 $(PYTHON_EXE): scripts/requirements.txt
 	@echo "Setting up virtual environment..."
@@ -49,25 +54,28 @@ $(DIST_DIR)/index.md: README.md scripts/json_to_md.py $(PYTHON_EXE)
 	@$(PYTHON_EXE) scripts/json_to_md.py "$<" | tee "$@"
 
 # Build the site
-$(INDEX_FILE): $(DIST_DIR)/index.md stylesheet.css
+$(INDEX_FILE): $(DIST_DIR)/index.md $(STYLESHEET)
 	pandoc \
 		"$<" \
 		--metadata title=$(MOD_NAME) \
 		--metadata version=$(VERSION) \
+		--css=$(STYLESHEET) \
+		--link-images=true \
 		--standalone \
-		--output "$@" \
+		--output "$@"
 
 $(DIST_DIR)/images/%.png: images/%.png
 	@mkdir -p $(DIST_DIR)/images
 	@cp $< $@
 
-# Help command
+
 help:
 	@echo "Makefile commands:"
 	@echo "  make            - Build the mod package"
 	@echo "  make clean      - Remove previous build files"
 	@echo "  make package    - Create the mod package"
+	@echo "  make pages      - Update the github-pages content"
 	@echo "  make help       - Show this help message"
 	@echo "  make distclean  - Clean and build the package with index file"
 
-.PHONY: all clean package help distclean
+.PHONY: all clean package pages help distclean
