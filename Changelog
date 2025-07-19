@@ -3,8 +3,9 @@
 ## 0.7.1 - 2025-07-18
 
 - Replace `modname:` with regular expression in simplelootbags loot tables
-- Updated simplelootbags to unstuck mid-game (early brass age) stall
+- Updated simplelootbags loot tables to unstuck mid-game (early brass age) stall
 - Add infection resistance to other, non-vanilla armors
+- Added visual and particle effects for better ambiance
 
 ## 0.7.0 - 2025-07-13
 
