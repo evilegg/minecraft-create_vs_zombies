@@ -28,6 +28,162 @@
 		"protection": 0.20
   },
   {
+    "item": "protection_pixel:breaker_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:wingsofprism_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:workerhornet_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:magneticstorm_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:pioneer_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:hellsnake_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:falconnest_chestplate",
+		"protection": 0.30
+  },
+  {
+    "item": "protection_pixel:typhoon_chestplate",
+		"protection": 0.30
+  },
+
+  {
+    "item": "protection_pixel:breakeras_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:wingsofprismas_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:workerhornetas_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:magneticstormas_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:pioneeras_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:hellsnakeas_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:falconnestas_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:typhoonas_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:floatshield_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:tosaki_chestplate",
+		"protection": 0.33
+  },
+  {
+    "item": "protection_pixel:plague_helmet",
+		"protection": 0.33
+	},
+  {
+    "item": "protection_pixel:lancer_helmet",
+		"protection": 0.25
+	},
+  {
+    "item": "protection_pixel:hammer_helmet",
+		"protection": 0.25
+	},
+  {
+    "item": "protection_pixel:hunter_helmet",
+		"protection": 0.25
+	},
+  {
+    "item": "protection_pixel:closed_helmet",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:bloodprisoner_helmet",
+		"protection": 0.25
+	},
+  {
+    "item": "protection_pixel:nightdemon_helmet",
+		"protection": 0.25
+	},
+  {
+    "item": "protection_pixel:plagueas_helmet",
+		"protection": 0.50
+	},
+  {
+    "item": "protection_pixel:lanceras_helmet",
+		"protection": 0.33
+	},
+  {
+    "item": "protection_pixel:hammeras_helmet",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:hunteras_helmet",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:closedas_helmet",
+		"protection": 0.50
+	},
+  {
+    "item": "protection_pixel:bloodprisoneras_helmet",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:tosaki_helmet",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:tosaki_leggings",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:slingshot_leggings",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:slingshotas_leggings",
+		"protection": 0.33
+	},
+  {
+    "item": "protection_pixel:anchorpoint_leggings",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:anchorpointas_leggings",
+		"protection": 0.33
+	},
+  {
+    "item": "protection_pixel:buoyancy_leggings",
+		"protection": 0.30
+	},
+  {
+    "item": "protection_pixel:buoyancyas_leggings",
+		"protection": 0.33
+	},
   {
     "item": "create_sa:copper_helmet",
     "protection": 0.05
