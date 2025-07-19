@@ -97,8 +97,8 @@ try {
             // Primarily for non-craftable, or very hard to find resources
             legendary_loot_bag: [
                 {at_least: 1, at_most: 3, id: "minecraft:ancient_debris"},
-                {at_least: 1, at_most: 1, id: "minecraft:netherite_upgrade_smithing_template"},
-                {at_least: 1, at_most: 1, id: "artifacts:"},
+                {at_least: 1, at_most: 1, re: "minecraft:.*_smithing_template"},
+                {at_least: 1, at_most: 1, re: "artifacts:.*"},
             ],
         }
     }
@@ -181,16 +181,15 @@ function quantity(min_quantity, max_quantity) {
     return min_quantity + Math.floor(Math.random() * Math.abs(max_quantity - min_quantity));
 }
 
-// Get all items that start with a given (mod-)prefix
-function getItemsByPrefix(prefix) {
-  const items = [];
-  // Iterate through all registered items
-  Item.getList().forEach(item => {
-      if (item.id.startsWith(prefix)) {
-        items.push(item.id);
-      }
-  });
-  return items;
+// Get all items that match a given regular expression
+function getItemsByRegex(regex_text) {
+  try {
+  const regular_expression = new RegExp(regex_text);
+  } catch (err) {
+    console.error(`Invalid regular expression: ${regex_text}`);
+    return [];
+  }
+  return Item.getList().filter(item => regular_expression.test(item.id));
 }
 
 // Get a random quantity of a loot_table item
@@ -198,16 +197,19 @@ function getWeightedRandomItem(loot_table) {
 
   const item = weightedRandomSelect(loot_table);
   if (item) {
-    if (!item.id.endsWith(':')) {
-      return Item.of(item.id, quantity(item.at_least, item.at_most));
+    // You can define a regular expression in the loot table to have this mod
+    // randomly check from a list of items, like from a "create:brass*" or
+    // "minecraft:*_smithing_template"
+    if (item.hasOwnProperty('re')) {
+      const matching_items = getItemsByRegex(item.re || "minecraft:dirt");
+      const randomIndex = Math.floor(Math.random() * matching_items.length);
+      return Item.of(matching_items[randomIndex], quantity(item.at_least, item.at_most));
     }
 
-    // The loot table includes a mod-prefix, randomly select an item from that modpack
-    const all_matching_items = getItemsByPrefix(item.id);
-    const randomIndex = Math.floor(Math.random() * all_matching_items.length);
-    return Item.of(all_matching_items[randomIndex], quantity(item.at_least, item.at_most));
+    // Plain old item selection
+    return Item.of(item.id, quantity(item.at_least, item.at_most));
   }
-  console.log("Cannot select from: " + loot_table)
+  console.error("Cannot select any item from: " + loot_table)
 }
 
 ItemEvents.firstRightClicked('simplelootbags:common_loot_bag', event => {
