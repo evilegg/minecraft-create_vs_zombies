@@ -1,0 +1,11 @@
+# Changelog
+
+## 0.7.1 - 2025-07-18
+
+- Replace `modname:` with regular expression in simplelootbags loot tables
+- Updated simplelootbags to unstuck mid-game (early brass age) stall
+
+## 0.7.0 - 2025-07-13
+
+- Initial version (submitted to modrinth moderators).
+- Suitable for playtesting by friends
