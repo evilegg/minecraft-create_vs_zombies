@@ -112,7 +112,7 @@ Spplement your resource gathering from the remnants of your _epic_ invasion batt
 
 ### Create: Protection Pixel
 
-Perhaps a few Create recipies can even out the odds for you?
+Perhaps a few Create recipes can even out the odds for you?
 
 **Package:** `protection_pixel-1.9.4-neoforge-1.21.1.jar`
 
