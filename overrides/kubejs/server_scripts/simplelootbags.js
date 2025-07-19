@@ -105,6 +105,7 @@ try {
             legendary_loot_bag: [
                 {at_least: 1, at_most: 1, id: "create:blaze_burner"},
                 {at_least: 1, at_most: 2, id: "create:crushing_wheel"},
+                {at_least: 1, at_most: 1, id: "create:rotation_speed_controller"},
                 {at_least: 1, at_most: 4, id: "minecraft:ancient_debris"},
                 {at_least: 1, at_most: 1, re: "minecraft:.+_smithing_template"},
                 {at_least: 1, at_most: 1, re: "artifacts:.+"},

@@ -172,6 +172,11 @@
 			},
 			{
 				"at_least": 1,
+				"at_most": 1,
+				"id": "create:rotation_speed_controller"
+			},
+			{
+				"at_least": 1,
 				"at_most": 4,
 				"id": "minecraft:ancient_debris"
 			},
