@@ -1,5 +1,34 @@
 [
   {
+    "item": "create_sa:andesite_jetpack_chestplate",
+		"protection": 0.10
+  },
+  {
+    "item": "create_sa:brass_jetpack_chestplate",
+		"protection": 0.10
+  },
+  {
+    "item": "create_sa:copper_jetpack_chestplate",
+		"protection": 0.10
+  },
+  {
+    "item": "create_sa:netherite_jetpack_chestplate",
+		"protection": 0.20
+  },
+  {
+    "item": "create_sa:copper_exoskeleton_chestplate",
+		"protection": 0.20
+  },
+  {
+    "item": "create_sa:andesite_exoskeleton_chestplate",
+		"protection": 0.20
+  },
+  {
+    "item": "create_sa:brass_exoskeleton_chestplate",
+		"protection": 0.20
+  },
+  {
+  {
     "item": "create_sa:copper_helmet",
     "protection": 0.05
   },
