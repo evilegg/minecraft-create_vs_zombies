@@ -61,14 +61,14 @@ try {
             "minecraft:zombified_piglin",
         ],
 
-        // Drop rates are the percentage chance to drop the associated loot box
+        // Percentage chance to drop the associated loot box
         dropRates: {
             common: 5,
             uncommon: 2.5,
             rare: 1.3,
             epic: 0.6,
             legendary: 0.3,
-            boss: 100,
+            boss: 33,
         },
 
         // Loot pool weights are implied: dach item in the list is twice as rare as the one before it
@@ -91,20 +91,20 @@ try {
                 {at_least: 1, at_most: 9, id: "create:brass_nugget"},
                 {at_least: 1, at_most: 2, id: "minecraft:pointed_dripstone"},
                 {at_least: 1, at_most: 3, id: "create:brass_ingot"},
-                {at_least: 2, at_most: 5, id: "minecraft:ender_pearl"},
+                {at_least: 1, at_most: 3, id: "minecraft:ender_pearl"},
                 {at_least: 1, at_most: 1, id: "minecraft:totem_of_undying"},
             ],
             epic_loot_bag: [
-                {at_least: 2, at_most: 3, id: "minecraft:diamond"},
-                {at_least: 1, at_most: 4, id: "minecraft:ender_pearl"},
-                {at_least: 3, at_most: 7, id: "minecraft:obsidian"},
+                {at_least: 1, at_most: 3, id: "minecraft:diamond"},
+                {at_least: 1, at_most: 2, id: "minecraft:ender_pearl"},
+                {at_least: 1, at_most: 3, id: "minecraft:obsidian"},
                 {at_least: 1, at_most: 1, re: "create:.+_toolbox"},
                 {at_least: 1, at_most: 1, id: "create:blaze_cake"},
             ],
             // Primarily for non-craftable, or very hard to find resources
             legendary_loot_bag: [
                 {at_least: 1, at_most: 1, id: "create:blaze_burner"},
-                {at_least: 2, at_most: 2, id: "create:crushing_wheel"},
+                {at_least: 1, at_most: 2, id: "create:crushing_wheel"},
                 {at_least: 1, at_most: 4, id: "minecraft:ancient_debris"},
                 {at_least: 1, at_most: 1, re: "minecraft:.+_smithing_template"},
                 {at_least: 1, at_most: 1, re: "artifacts:.+"},
