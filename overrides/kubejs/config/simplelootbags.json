@@ -8,6 +8,11 @@
 		"minecraft:giant",
 		"minecraft:warden"
 	],
+	"bossHealth": 40,
+	"bossTags": [
+		"spawnedWithBackpack",
+		"bossMonster"
+	],
 	"hostileEntities": [
 		"minecraft:blaze",
 		"minecraft:bogged",
@@ -146,7 +151,7 @@
 			{
 				"at_least": 1,
 				"at_most": 1,
-				"re": "create:*_toolbox"
+				"re": "create:.+_toolbox"
 			},
 			{
 				"at_least": 1,
@@ -173,12 +178,12 @@
 			{
 				"at_least": 1,
 				"at_most": 1,
-				"re": "minecraft:.*_smithing_template"
+				"re": "minecraft:.+_smithing_template"
 			},
 			{
 				"at_least": 1,
 				"at_most": 1,
-				"re": "artifacts:.*"
+				"re": "artifacts:.+"
 			}
 		]
 	}

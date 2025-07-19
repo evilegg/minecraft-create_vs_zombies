@@ -23,6 +23,13 @@ try {
             "minecraft:giant",
             "minecraft:warden",
         ],
+        // boss's have more than 40 hearts
+        bossHealth: 40,
+        // boss's can also have certain tags
+        bossTags: [
+            "spawnedWithBackpack",
+            "bossMonster",
+        ],
 
         hostileEntities: [
             "minecraft:blaze",
@@ -91,7 +98,7 @@ try {
                 {at_least: 2, at_most: 3, id: "minecraft:diamond"},
                 {at_least: 1, at_most: 4, id: "minecraft:ender_pearl"},
                 {at_least: 3, at_most: 7, id: "minecraft:obsidian"},
-                {at_least: 1, at_most: 1, re: "create:*_toolbox"},
+                {at_least: 1, at_most: 1, re: "create:.+_toolbox"},
                 {at_least: 1, at_most: 1, id: "create:blaze_cake"},
             ],
             // Primarily for non-craftable, or very hard to find resources
@@ -99,33 +106,51 @@ try {
                 {at_least: 1, at_most: 1, id: "create:blaze_burner"},
                 {at_least: 2, at_most: 2, id: "create:crushing_wheel"},
                 {at_least: 1, at_most: 4, id: "minecraft:ancient_debris"},
-                {at_least: 1, at_most: 1, re: "minecraft:.*_smithing_template"},
-                {at_least: 1, at_most: 1, re: "artifacts:.*"},
+                {at_least: 1, at_most: 1, re: "minecraft:.+_smithing_template"},
+                {at_least: 1, at_most: 1, re: "artifacts:.+"},
             ],
         }
     }
-    console.log(`Unable to load ${configFilePath}, using default configuration`);
+    console.warn(`Unable to load ${configFilePath}, using default configuration`);
     JsonIO.write(configFilePath, CONFIG);
 }
 
 // helpers
-const hostileMobs = new Set(CONFIG.hostileEntities);
-const bossMobs = new Set(CONFIG.bossEntities);
+const bossMobIds = new Set(CONFIG.bossEntities);
+const bossMobTags = new Set(CONFIG.bossTags);
 function isBossMob(entity) {
     const mob = String(entity.type);
-    const retval = entity.hasTag("spawnedWithBackpack") || entity.hasTag("bossMonster") || bossMobs.has(mob);
-    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasTag("spawnedWithBackpack")}`)
-    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasTag("bossMonster")}`)
-    console.log(`isBossMob(${retval}): ${mob} -> ${bossMobs.has(mob)}`)
-    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasOwnProperty("getEntity")}`)
-    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasOwnProperty("getStartingHp")}`)
-    //console.log(`isBossMob(${retval}): ${mob} -> ${Array.from(bossMobs)}`)
-    return retval;
+
+    if (CONFIG.bossTags) {
+      const entity_tags = entity.getTags();
+      for (const element of entity_tags) {
+        if (bossMobTags.has(String(element))) {
+          //console.log(`isBossMob(true): ${mob} tags match ${entity_tags} / ${CONFIG.bossTags} / ${Array.of(bossMobTags)}`)
+          return true;
+        }
+      }
+    }
+
+    if (CONFIG.bossHealth > 0) {
+      if (entity.getMaxHealth() > CONFIG.bossHealth) {
+        //console.log(`isBossMob(true): ${mob} max health ${entity.getMaxHealth} > ${CONFIG.bossHealth}`)
+        return true;
+      }
+    }
+    if (bossMobIds.has(mob)) {
+      //console.log(`isBossMob(true): ${mob} id in list`)
+      retval = true;
+    }
+
+    //console.log(`isBossMob(${false}): ${mob}`)
+    return false;
 }
+
+const hostileMobIds = new Set(CONFIG.hostileEntities);
 function isHostileMob(entity) {
     const mob = String(entity.type);
-    const retval = hostileMobs.has(mob);
-    //console.log(`isHostileMob(${retval}): ${mob} -> ${Array.from(hostileMobs)}`)
+    const retval = hostileMobIds.has(mob);
+    //console.log(`isHostileMob(${retval}): ${mob}`)
     return retval;
 }
 
@@ -191,12 +216,13 @@ function quantity(min_quantity, max_quantity) {
 // Get all items that match a given regular expression
 function getItemsByRegex(regex_text) {
   try {
-  const regular_expression = new RegExp(regex_text);
+    let regular_expression = new RegExp(regex_text);
+    return Item.getList().filter(item => regular_expression.test(item.id));
   } catch (err) {
-    console.error(`Invalid regular expression: ${regex_text}`);
+    console.warn(`Invalid regular expression: ${err}: ${regex_text}`);
     return [];
   }
-  return Item.getList().filter(item => regular_expression.test(item.id));
+  return [];
 }
 
 // Get a random quantity of a loot_table item
@@ -205,8 +231,8 @@ function getWeightedRandomItem(loot_table) {
   const item = weightedRandomSelect(loot_table);
   if (item) {
     // You can define a regular expression in the loot table to have this mod
-    // randomly check from a list of items, like from a "create:brass*" or
-    // "minecraft:*_smithing_template"
+    // randomly check from a list of items, like from a "create:brass.*" or
+    // "minecraft:.+_smithing_template"
     if (item.hasOwnProperty('re')) {
       const matching_items = getItemsByRegex(item.re || "minecraft:dirt");
       const randomIndex = Math.floor(Math.random() * matching_items.length);
@@ -216,7 +242,7 @@ function getWeightedRandomItem(loot_table) {
     // Plain old item selection
     return Item.of(item.id, quantity(item.at_least, item.at_most));
   }
-  console.error("Cannot select any item from: " + loot_table)
+  console.warn("Cannot select any item from: " + loot_table)
 }
 
 ItemEvents.firstRightClicked('simplelootbags:common_loot_bag', event => {
@@ -285,7 +311,7 @@ if (CONFIG.modEnabled) {
 
         // Drop a legendary loot bag on boss kill
         if (isBossMob(entity)) {
-            let random = Math.random() * 100;
+            let random = Math.floor(Math.random() * 100) + 1;
             if (random <= CONFIG.dropRates.boss) {
                 const drop = Item.of('simplelootbags:legendary_loot_bag', 1);
                 console.log(`BOSS: "${entity.type}" is dropping: "${drop}"`);
