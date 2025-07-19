@@ -1,4 +1,88 @@
 [
+  {
+    "item": "create_sa:copper_helmet",
+    "protection": 0.05
+  },
+  {
+    "item": "create_sa:copper_chestplate",
+    "protection": 0.05
+  },
+  {
+    "item": "create_sa:copper_leggings",
+    "protection": 0.05
+  },
+  {
+    "item": "create_sa:copper_boots",
+    "protection": 0.05
+  },
+  {
+    "item": "create_sa:zinc_helmet",
+    "protection": 0.10
+  },
+  {
+    "item": "create_sa:zinc_chestplate",
+    "protection": 0.10
+  },
+  {
+    "item": "create_sa:zinc_leggings",
+    "protection": 0.12
+  },
+  {
+    "item": "create_sa:zinc_boots",
+    "protection": 0.12
+  },
+  {
+    "item": "create_sa:brass_helmet",
+    "protection": 0.15
+  },
+  {
+    "item": "create_sa:brass_chestplate",
+    "protection": 0.15
+  },
+  {
+    "item": "create_sa:brass_leggings",
+    "protection": 0.15
+  },
+  {
+    "item": "create_sa:brass_boots",
+    "protection": 0.15
+  },
+  {
+    "item": "create_deep_dark:echo_armor_helmet",
+		"protection": 0.25
+  },
+  {
+    "item": "create_deep_dark:echo_armor_chestplate",
+		"protection": 0.25
+  },
+  {
+    "item": "create_deep_dark:echo_armor_leggings",
+		"protection": 0.25
+  },
+  {
+    "item": "create_deep_dark:echo_armor_boots",
+		"protection": 0.25
+  },
+  {
+    "item": "create:copper_diving_helmet",
+    "protection": 0.10
+  },
+  {
+    "item": "create:copper_diving_boots",
+    "protection": 0.15
+  },
+  {
+    "item": "create:netherite_diving_helmet",
+    "protection": 0.25
+  },
+  {
+    "item": "create_sa:slime_helmet",
+    "protection": 0.05
+  },
+  {
+    "item": "create_sa:slime_boots",
+    "protection": 0.05
+  },
 	{
 		"item": "minecraft:leather_boots",
 		"protection": 0.05
