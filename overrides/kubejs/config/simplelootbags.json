@@ -85,18 +85,18 @@
 				"id": "minecraft:gold_ingot"
 			},
 			{
-				"at_least": 1,
-				"at_most": 2,
+				"at_least": 2,
+				"at_most": 6,
 				"id": "create:andesite_alloy"
 			},
 			{
 				"at_least": 1,
-				"at_most": 2,
+				"at_most": 3,
 				"id": "minecraft:diamond"
 			},
 			{
 				"at_least": 1,
-				"at_most": 1,
+				"at_most": 2,
 				"id": "minecraft:golden_apple"
 			}
 		],
@@ -108,8 +108,8 @@
 			},
 			{
 				"at_least": 1,
-				"at_most": 1,
-				"id": "minecraft:golden_apple"
+				"at_most": 2,
+				"id": "minecraft:pointed_dripstone"
 			},
 			{
 				"at_least": 1,
@@ -117,8 +117,8 @@
 				"id": "create:brass_ingot"
 			},
 			{
-				"at_least": 1,
-				"at_most": 4,
+				"at_least": 2,
+				"at_most": 5,
 				"id": "minecraft:ender_pearl"
 			},
 			{
@@ -139,36 +139,46 @@
 				"id": "minecraft:ender_pearl"
 			},
 			{
+				"at_least": 3,
+				"at_most": 7,
+				"id": "minecraft:obsidian"
+			},
+			{
+				"at_least": 1,
+				"at_most": 1,
+				"re": "create:*_toolbox"
+			},
+			{
+				"at_least": 1,
+				"at_most": 1,
+				"id": "create:blaze_cake"
+			}
+		],
+		"legendary_loot_bag": [
+			{
+				"at_least": 1,
+				"at_most": 1,
+				"id": "create:blaze_burner"
+			},
+			{
 				"at_least": 2,
 				"at_most": 2,
 				"id": "create:crushing_wheel"
 			},
 			{
 				"at_least": 1,
-				"at_most": 1,
-				"id": "create:blaze_cake"
-			},
-			{
-				"at_least": 1,
-				"at_most": 1,
-				"id": "create:blaze_burner"
-			}
-		],
-		"legendary_loot_bag": [
-			{
-				"at_least": 1,
-				"at_most": 3,
+				"at_most": 4,
 				"id": "minecraft:ancient_debris"
 			},
 			{
 				"at_least": 1,
 				"at_most": 1,
-				"id": "minecraft:netherite_upgrade_smithing_template"
+				"re": "minecraft:.*_smithing_template"
 			},
 			{
 				"at_least": 1,
 				"at_most": 1,
-				"id": "artifacts:"
+				"re": "artifacts:.*"
 			}
 		]
 	}

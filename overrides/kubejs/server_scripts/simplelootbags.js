@@ -76,27 +76,29 @@ try {
             uncommon_loot_bag: [
                 {at_least: 2, at_most: 4, id: "minecraft:iron_ingot"},
                 {at_least: 2, at_most: 4, id: "minecraft:gold_ingot"},
-                {at_least: 1, at_most: 2, id: "create:andesite_alloy"},
-                {at_least: 1, at_most: 2, id: "minecraft:diamond"},
-                {at_least: 1, at_most: 1, id: "minecraft:golden_apple"},
+                {at_least: 2, at_most: 6, id: "create:andesite_alloy"},
+                {at_least: 1, at_most: 3, id: "minecraft:diamond"},
+                {at_least: 1, at_most: 2, id: "minecraft:golden_apple"},
             ],
             rare_loot_bag: [
                 {at_least: 1, at_most: 9, id: "create:brass_nugget"},
-                {at_least: 1, at_most: 1, id: "minecraft:golden_apple"},
+                {at_least: 1, at_most: 2, id: "minecraft:pointed_dripstone"},
                 {at_least: 1, at_most: 3, id: "create:brass_ingot"},
-                {at_least: 1, at_most: 4, id: "minecraft:ender_pearl"},
+                {at_least: 2, at_most: 5, id: "minecraft:ender_pearl"},
                 {at_least: 1, at_most: 1, id: "minecraft:totem_of_undying"},
             ],
             epic_loot_bag: [
                 {at_least: 2, at_most: 3, id: "minecraft:diamond"},
                 {at_least: 1, at_most: 4, id: "minecraft:ender_pearl"},
-                {at_least: 2, at_most: 2, id: "create:crushing_wheel"},
+                {at_least: 3, at_most: 7, id: "minecraft:obsidian"},
+                {at_least: 1, at_most: 1, re: "create:*_toolbox"},
                 {at_least: 1, at_most: 1, id: "create:blaze_cake"},
-                {at_least: 1, at_most: 1, id: "create:blaze_burner"},
             ],
             // Primarily for non-craftable, or very hard to find resources
             legendary_loot_bag: [
-                {at_least: 1, at_most: 3, id: "minecraft:ancient_debris"},
+                {at_least: 1, at_most: 1, id: "create:blaze_burner"},
+                {at_least: 2, at_most: 2, id: "create:crushing_wheel"},
+                {at_least: 1, at_most: 4, id: "minecraft:ancient_debris"},
                 {at_least: 1, at_most: 1, re: "minecraft:.*_smithing_template"},
                 {at_least: 1, at_most: 1, re: "artifacts:.*"},
             ],
@@ -112,6 +114,11 @@ const bossMobs = new Set(CONFIG.bossEntities);
 function isBossMob(entity) {
     const mob = String(entity.type);
     const retval = entity.hasTag("spawnedWithBackpack") || entity.hasTag("bossMonster") || bossMobs.has(mob);
+    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasTag("spawnedWithBackpack")}`)
+    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasTag("bossMonster")}`)
+    console.log(`isBossMob(${retval}): ${mob} -> ${bossMobs.has(mob)}`)
+    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasOwnProperty("getEntity")}`)
+    console.log(`isBossMob(${retval}): ${mob} -> ${entity.hasOwnProperty("getStartingHp")}`)
     //console.log(`isBossMob(${retval}): ${mob} -> ${Array.from(bossMobs)}`)
     return retval;
 }
