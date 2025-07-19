@@ -1,7 +1,7 @@
 {
   "game": "minecraft",
   "formatVersion": 1,
-  "versionId": "0.7.0",
+  "versionId": "0.7.1",
   "name": "Create vs Zombies",
   "summary": "Balance between base-building and exploration: use create to automate your production and salvage equipment. Hunt out molten vents for reusable ores. Find curios.\n\nBut the world is dangerous every few nights, an undead horde will attack. The sun won’t stop them, be ready.\n\nOh and every hit from an undead has a chance to infect you. Without a golden apple to cure you, the infection means certain death.",
   "files": [
