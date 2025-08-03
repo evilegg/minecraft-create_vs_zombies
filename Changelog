@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0 - 2025-08-03
+
+- Add client side particle effects
+- Update included modpacks to latest
+- Some installation clean-up
+
 ## 0.7.1 - 2025-07-18
 
 - Replace `modname:` with regular expression in simplelootbags loot tables
