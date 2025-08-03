@@ -6,3 +6,5 @@ StartupEvents.registry('item', event => {
     event.create('simplelootbags:epic_loot_bag').texture('simplelootbags:item/epiclootbag').maxStackSize(9)
     event.create('simplelootbags:legendary_loot_bag').texture('simplelootbags:item/legendarylootbag').maxStackSize(1).glow(true)
 })
+
+console.info('Loaded: simplelootbags.js')
