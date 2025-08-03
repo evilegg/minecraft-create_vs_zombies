@@ -1,7 +1,0 @@
-[
-  {"version":2},
-  {"ingredient":{"id":"minecraft:spruce_door"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:evoker_spawn_egg"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:spruce_trapdoor"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"compressedblocks:c0_deepslate_zinc_ore"},"type":"item_stack","bookmarkType":"INGREDIENT"}
-]
